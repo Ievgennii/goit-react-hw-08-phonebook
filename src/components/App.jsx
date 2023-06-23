@@ -1,16 +1,34 @@
+import { useDispatch } from 'react-redux';
+import { refreshUserThunk } from 'redux/user/userThunk';
+import { useEffect } from 'react';
+import Navigation from './Navigation';
+import { Route, Routes } from 'react-router-dom';
+import { PublicRoute } from './PublicRoute';
+import SignUp from '../pages/SignUp';
+import Login from '../pages/Login';
+import { PrivateRoute } from './PrivateRoute';
+import Contacts from '../pages/Contacts';
+
 export const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshUserThunk());
+  }, [dispatch]);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<PublicRoute />}>
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
+        <Route path="/" element={<PrivateRoute />}>
+          <Route path="/contacts" element={<Contacts />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
+
+export default App;

@@ -1,4 +1,4 @@
-import { backendAPI } from 'redux/BaseHttp/BaseHttp';
+import { backendAPI } from './backendApi';
 // import axios from 'axios';
 // axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 

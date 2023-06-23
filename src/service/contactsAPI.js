@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { backendAPI } from 'redux/BaseHttp/BaseHttp';
+import { backendAPI } from './backendApi';
+
+
 
 export const contactAPI = axios.create({
   baseURL: 'https://connections-api.herokuapp.com',
