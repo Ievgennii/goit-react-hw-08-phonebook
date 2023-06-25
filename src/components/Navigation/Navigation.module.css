@@ -1,0 +1,14 @@
+.navlink {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  color: black;  
+
+  &:hover, active {
+    color: white;
+      }
+  /* &:active {
+    color: white;
+    
+  } */
+}

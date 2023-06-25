@@ -1,0 +1,22 @@
+.ul {
+  
+  margin: 0;
+ 
+}
+
+.li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  
+
+  & > span {
+    width: 30%;
+    font-size: 16px;
+    /* @media (min-width: 600px) {
+      width: 50%;
+      font-size: 22px;
+    } */
+  }
+}
