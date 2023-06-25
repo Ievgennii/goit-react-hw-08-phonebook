@@ -11,12 +11,12 @@ export const UserMenu = () => {
   const onLogOut = () => dispatch(logOut());
 
   return (
-    <div>
+    <div className={css.div}>
       <span className={css.span}>Hello, {name} </span>
       <Button
       variant="contained"
       sx={{
-        mt: 2,
+        mt: 1,
         mb: 2,
         color: '#0f1111',
         background: '#6688d0',

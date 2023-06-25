@@ -11,8 +11,11 @@ const LoginPage = () => {
 
   const onLogin = data => {
     if (status === 400) {
-      toast.success('You are no authorized');
+      toast.success('You are unauthorized');
     }
+    // if (status === 401) {
+    //   toast.success('You are unauthorized');
+    // }
     dispatch(logIn(data));
   };
 

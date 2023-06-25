@@ -13,6 +13,9 @@ const RegisterPage = () => {
     if (status === 400) {
       toast.success('You are already authorized');
     }
+    // if (status === 401) {
+    //   toast.success('You are unauthorized');
+    // }
     dispatch(signUp(data));
   };
 
