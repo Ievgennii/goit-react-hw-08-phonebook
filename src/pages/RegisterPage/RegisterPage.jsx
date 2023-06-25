@@ -3,7 +3,6 @@ import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 import { signUp } from 'redux/auth/authThunk';
 import { useSelector } from 'react-redux';
 import { getAuthError } from 'redux/auth/authSelectors';
-
 import toast from 'react-hot-toast';
 
 const RegisterPage = () => {
